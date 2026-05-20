@@ -1,6 +1,6 @@
 # Starter Studio Website
 
-A professional static company website for **Starter Studio, Inc.** and its public product model, **App Factory**.
+A professional static company website for **App Factory**, operated by **Starter Studio, Inc.**.
 
 ## Tech stack
 - Vite
@@ -33,3 +33,9 @@ A `netlify.toml` file is included for standard static deployment.
 - Privacy Policy (`/privacy`)
 - Terms of Use (`/terms`)
 - Support (`/support`)
+
+
+## Netlify Forms
+- The `/support` page uses a static Netlify form (`support-contact`) for submissions.
+- Configure Netlify form notifications in the Netlify dashboard for your preferred inbox destination.
+- The public website does not display contact email addresses; visitor contact is routed through the Support form.
