@@ -16,7 +16,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       '/': {
         title: 'App Factory | Mobile Product Studio',
         description:
-          'App Factory is a mobile product studio backed by Starter Studio, Inc. We build and operate focused consumer apps and selected partner products.'
+          'App Factory is a mobile product studio operated by Starter Studio, Inc. We design, build, and operate focused apps for consumer markets, internal ventures, and selected product partners.'
       },
       '/privacy': {
         title: 'Privacy Policy | App Factory',
@@ -68,8 +68,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <div className="container footer-grid">
           <div>
             <h2>App Factory</h2>
-            <p>Starter Studio, Inc.</p>
-            <p>starterstudio.us</p>
+            <p>Operated by Starter Studio, Inc.</p>
           </div>
           <div className="footer-links">
             <Link to="/">Home</Link>
