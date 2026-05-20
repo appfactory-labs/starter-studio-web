@@ -14,24 +14,21 @@ export default function Layout({ children }: { children: ReactNode }) {
   useEffect(() => {
     const pageMap: Record<string, { title: string; description: string }> = {
       '/': {
-        title: 'Starter Studio | Focused Mobile Products',
+        title: 'App Factory | Mobile Product Studio',
         description:
-          'Starter Studio, Inc. builds and operates focused mobile apps through App Factory.'
+          'App Factory is a mobile product studio backed by Starter Studio, Inc. We build and operate focused consumer apps and selected partner products.'
       },
       '/privacy': {
-        title: 'Privacy Policy | Starter Studio',
-        description:
-          'Read the privacy policy for Starter Studio, Inc. and how we handle website and product-related data.'
+        title: 'Privacy Policy | App Factory',
+        description: 'Read the privacy policy for App Factory, operated by Starter Studio, Inc.'
       },
       '/terms': {
-        title: 'Terms of Use | Starter Studio',
-        description:
-          'Review the terms of use for the Starter Studio website and related content.'
+        title: 'Terms of Use | App Factory',
+        description: 'Review the terms of use for App Factory, operated by Starter Studio, Inc.'
       },
       '/support': {
-        title: 'Support | Starter Studio',
-        description:
-          'Contact Starter Studio support for product, privacy, and business inquiries.'
+        title: 'Support | App Factory',
+        description: 'Contact App Factory through the support form for product and company inquiries.'
       }
     };
 
@@ -46,7 +43,10 @@ export default function Layout({ children }: { children: ReactNode }) {
       <a className="skip-link" href="#main-content">Skip to content</a>
       <header className="site-header">
         <div className="container nav-wrap">
-          <Link to="/" className="brand">Starter Studio</Link>
+          <div className="brand-wrap">
+            <Link to="/" className="brand">App Factory</Link>
+            <p className="legal-note">Operated by Starter Studio, Inc.</p>
+          </div>
           <nav aria-label="Global">
             <ul className="nav-list">
               {links.map((link) => (
@@ -58,7 +58,7 @@ export default function Layout({ children }: { children: ReactNode }) {
               ))}
             </ul>
           </nav>
-          <a className="btn btn-primary" href="mailto:support@starterstudio.us">Contact Support</a>
+          <Link className="btn btn-secondary" to="/support">Contact</Link>
         </div>
       </header>
 
@@ -67,14 +67,14 @@ export default function Layout({ children }: { children: ReactNode }) {
       <footer className="site-footer">
         <div className="container footer-grid">
           <div>
-            <h2>Starter Studio, Inc.</h2>
-            <p>App Factory</p>
+            <h2>App Factory</h2>
+            <p>Starter Studio, Inc.</p>
             <p>starterstudio.us</p>
-            <a href="mailto:support@starterstudio.us">support@starterstudio.us</a>
           </div>
           <div className="footer-links">
-            <Link to="/privacy">Privacy Policy</Link>
-            <Link to="/terms">Terms of Use</Link>
+            <Link to="/">Home</Link>
+            <Link to="/privacy">Privacy</Link>
+            <Link to="/terms">Terms</Link>
             <Link to="/support">Support</Link>
           </div>
         </div>
